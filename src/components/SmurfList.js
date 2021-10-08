@@ -3,8 +3,8 @@ import Smurf from './Smurf';
 import { connect } from 'react-redux';
 
  const SmurfList = (props)=> {
-    const { smurfs } = props;
-    const isLoading = false;
+    const { smurfs, isLoading } = props;
+    // const isLoading = false;
     const testSmurf = {
         id:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
         name:'Poppa Smurf',
@@ -24,7 +24,8 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
     return({
-        smurfs: state.smurfs
+        smurfs: state.smurfs,
+        isLoading: state.isLoading
     })
 }
 
